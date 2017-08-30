@@ -1,0 +1,6 @@
+framework module Pods_LQGPhotoBrowser_Example {
+  umbrella header "Pods-LQGPhotoBrowser_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

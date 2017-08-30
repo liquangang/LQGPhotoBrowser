@@ -7,6 +7,7 @@
 //
 
 #import "LQGViewController.h"
+#import <LQGPhotoBrowser/PhotoManager.h>
 
 @interface LQGViewController ()
 
@@ -18,6 +19,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [PhotoManager addPhotoSelectVc:self];
+    
 }
 
 - (void)didReceiveMemoryWarning

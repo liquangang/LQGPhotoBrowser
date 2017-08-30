@@ -1,0 +1,30 @@
+{
+  "name": "LQGPhotoBrowser",
+  "version": "0.1.0",
+  "summary": "A short description of LQGPhotoBrowser.",
+  "description": "相册开源库",
+  "homepage": "https://github.com/liquangang/LQGPhotoBrowser",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "liquangang": "liquangang@idstaff.com"
+  },
+  "source": {
+    "git": "https://github.com/liquangang/LQGPhotoBrowser.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LQGPhotoBrowser/**/*",
+  "dependencies": {
+    "Masonry": [
+
+    ],
+    "LQGWaterLayout": [
+
+    ]
+  }
+}

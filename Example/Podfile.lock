@@ -1,0 +1,41 @@
+PODS:
+  - Expecta (1.0.6)
+  - Expecta+Snapshots (3.1.1):
+    - Expecta (~> 1.0)
+    - FBSnapshotTestCase/Core (~> 2.0)
+    - Specta (~> 1.0)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - LQGPhotoBrowser (0.1.0):
+    - LQGWaterLayout
+    - Masonry
+  - LQGWaterLayout (1.0.2)
+  - Masonry (1.0.2)
+  - Specta (1.0.6)
+
+DEPENDENCIES:
+  - Expecta
+  - Expecta+Snapshots
+  - FBSnapshotTestCase
+  - LQGPhotoBrowser (from `../`)
+  - Specta
+
+EXTERNAL SOURCES:
+  LQGPhotoBrowser:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
+  Expecta+Snapshots: dcff217eef506dabd6dfdc7864ea2da321fafbb8
+  FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
+  LQGPhotoBrowser: 50b738e29de6a5f27155fb2a4b5814ef1393e82b
+  LQGWaterLayout: 9447aced5f131d7c4e46f822727d79f6d40587f8
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
+
+PODFILE CHECKSUM: 3457c344e7d73d810781c1026fb4ba8ee7fa4d4e
+
+COCOAPODS: 1.2.1

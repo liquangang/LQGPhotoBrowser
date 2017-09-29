@@ -24,7 +24,6 @@ static NSString *itemResuableID = @"PhotoPreviewCollectionViewCell";
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) AVPlayerLayer *playLayer;
 @property (nonatomic, strong) AVPlayer *player;
-@property (nonatomic, strong) UIView *navView;                      //自定义导航栏
 @property (nonatomic, assign) BOOL isPlay;                          //记录播放状态
 @property (nonatomic, strong) AVPlayerItem *playerItem;             //播放资源对象
 
@@ -42,10 +41,12 @@ static NSString *itemResuableID = @"PhotoPreviewCollectionViewCell";
     self.automaticallyAdjustsScrollViewInsets = YES;
     self.view.backgroundColor = [UIColor blackColor];
     
+    if (<#condition#>) {
+        <#statements#>
+    }
+    
     [self.view addSubview:self.collectionView];
     [self.collectionView scrollToItemAtIndexPath:self.indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
-    
-    [self.view addSubview:self.navView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -172,32 +173,6 @@ static NSString *itemResuableID = @"PhotoPreviewCollectionViewCell";
         _collectionView = tempView;
     }
     return _collectionView;
-}
-
-- (UIView *)navView{
-    if (!_navView) {
-        UIView *tempView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 64)];
-        tempView.backgroundColor = ColorFromRGBA(0xFFFFFF, 0.88);
-        
-        UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 44, 44)];
-        [backButton setTitle:@"返回" forState:UIControlStateNormal];
-        [backButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-        [backButton addTarget:self action:@selector(backButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-        
-        [tempView addSubview:backButton];
-        
-        if ([self.navigationController.viewControllers.firstObject isKindOfClass:[PhotoHomeViewController class]]) {
-            UIButton *cancleButton = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 64, 20, 44, 44)];
-            [cancleButton setTitle:@"取消" forState:UIControlStateNormal];
-            [cancleButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-            [cancleButton addTarget:self action:@selector(cancleButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-            
-            [tempView addSubview:cancleButton];
-        }
-        
-        _navView = tempView;
-    }
-    return _navView;
 }
 
 @end
